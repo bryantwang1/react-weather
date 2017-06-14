@@ -1,0 +1,24 @@
+{
+  "name": "wang-weather",
+  "productName": "Wang Weather",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "watchify app/app.js -t babelify -o public/js/bundle.js --debug --verbose"
+  },
+  "author": "Bryant Wang",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.16.2",
+    "babel-preset-react": "^6.24.0",
+    "babelify": "^7.3.0",
+    "jquery": "^3.2.1",
+    "react": "^15.6.0",
+    "react-autocomplete": "^1.0.0-rc2",
+    "react-dom": "^15.6.0"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.5.2"
+  }
+}
