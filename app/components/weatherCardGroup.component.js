@@ -16,6 +16,7 @@ class WeatherCardGroup extends React.Component {
             summary={day.summary}
             tempHigh={day.temperatureMax}
             tempLow={day.temperatureMin}
+            timezone={this.props.timezone}
           />
         );
       });

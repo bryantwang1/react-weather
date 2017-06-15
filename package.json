@@ -14,6 +14,7 @@
     "babel-preset-react": "^6.24.0",
     "babelify": "^7.3.0",
     "jquery": "^3.2.1",
+    "moment-timezone": "^0.5.13",
     "react": "^15.6.0",
     "react-autocomplete": "^1.0.0-rc2",
     "react-dom": "^15.6.0"
