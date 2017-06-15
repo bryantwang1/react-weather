@@ -24,6 +24,7 @@ class AppContainer extends React.Component {
       .then(response => {
         console.log(response);
         _this.setState({
+          timezone: response.data.timezone,
           currently: response.data.currently,
           daily: response.data.daily
         });
@@ -45,6 +46,7 @@ class AppContainer extends React.Component {
         />
         <WeatherCardGroup
           daily={this.state.daily}
+          timezone={this.state.timezone}
         />
       </div>
     );
