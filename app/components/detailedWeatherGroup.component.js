@@ -19,6 +19,9 @@ class DetailedWeatherGroup extends React.Component {
     }
     return (
       <div className="detailed-weather-group">
+        <CurrentWeather
+          data={this.props.currently}
+        />
         {detailedWeathers}
       </div>
     );

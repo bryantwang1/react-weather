@@ -4,7 +4,7 @@ import Moment from 'moment-timezone';
 class WeatherCard extends React.Component {
 
   render() {
-    let date = Moment.tz(parseInt(this.props.time + "000"), this.props.timezone).day();
+    let date = Moment.tz(parseInt(this.props.time + '000'), this.props.timezone).day();
     let days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
     let day = days[date];
     return (
