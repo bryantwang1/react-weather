@@ -2,7 +2,7 @@ import React from 'react';
 import Axios from 'axios';
 
 import WeatherCardGroup from '../components/weatherCardGroup.component';
-import SelectedWeather from '../components/selectedWeather.component';
+import DetailedWeatherGroup from '../components/detailedWeatherGroup.component';
 
 class AppContainer extends React.Component {
 
@@ -41,8 +41,9 @@ class AppContainer extends React.Component {
   render() {
     return (
       <div className="wang-weather">
-        <SelectedWeather
+        <DetailedWeatherGroup
           currently={this.state.currently}
+          daily={this.state.daily}
         />
         <WeatherCardGroup
           daily={this.state.daily}

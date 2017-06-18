@@ -1,10 +1,10 @@
 import React from 'react';
 
-class SelectedWeather extends React.Component {
+class DetailedWeather extends React.Component {
 
   render() {
     return (
-      <div className="selected-weather">
+      <div className="detailed-weather">
         <h1>{this.props.currently.summary}</h1>
         <h3>{this.props.currently.temperature}</h3>
       </div>
@@ -13,4 +13,4 @@ class SelectedWeather extends React.Component {
 
 }
 
-export default SelectedWeather
+export default DetailedWeather
