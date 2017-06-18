@@ -6,6 +6,7 @@ class DetailedWeatherGroup extends React.Component {
 
   render() {
     let weatherData = this.props.daily.data;
+    let todayDaily;
     let detailedWeathers = [];
     if (typeof weatherData != 'undefined') {
       detailedWeathers = weatherData.map(day => {
@@ -16,11 +17,14 @@ class DetailedWeatherGroup extends React.Component {
           />
         );
       });
+      todayDaily = detailedWeathers[0].props.data;
+      detailedWeathers.splice(0, 1);
     }
     return (
       <div className="detailed-weather-group">
         <CurrentWeather
-          data={this.props.currently}
+          currently={this.props.currently}
+          daily={todayDaily}
         />
         {detailedWeathers}
       </div>
