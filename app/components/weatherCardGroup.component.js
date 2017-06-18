@@ -21,7 +21,6 @@ class WeatherCardGroup extends React.Component {
         );
       });
     }
-    console.log(weatherCards);
     return (
       <div className="weather-card-group">
         <h2>7 Day summary: </h2>

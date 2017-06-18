@@ -35,7 +35,7 @@ class AppContainer extends React.Component {
   }
 
   componentDidMount() {
-    this.getForecast(42.3601, -71.0589);
+    this.getForecast(45.517303, -122.691803);
   }
 
   render() {
