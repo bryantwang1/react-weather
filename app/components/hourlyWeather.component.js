@@ -7,6 +7,7 @@ class HourlyWeather extends React.Component {
     let dataTime = Moment(parseInt(this.props.data.time + '000'));
     let dateOnly = dataTime.format('MMMM Do');
     let timeOnly = dataTime.format('h:mm:ss a');
+
     if(typeof this.props.data != 'undefined') {
       let date = Moment(parseInt(this.props.data.time + '000')).day();
       let days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
@@ -14,20 +15,32 @@ class HourlyWeather extends React.Component {
 
       let tempMaxTime = Moment(parseInt(this.props.data.temperatureMaxTime + '000')).format('h:mm:ss a');
       let tempMinTime = Moment(parseInt(this.props.data.temperatureMinTime + '000')).format('h:mm:ss a');
+
+      let divStyle = { borderLeft: '10px solid', borderLeftColor: 'Beige' };
+      let icons = ['clear-day', 'clear-night', 'partly-cloudy-day', 'partly-cloudy-night', 'cloudy', 'rain', 'sleet', 'snow', 'wind', 'fog'];
+      let iconColors = ['Yellow', 'Yellow', 'LightSteelBlue', 'LightSteelBlue', 'Black', 'DodgerBlue', 'DodgerBlue', 'DodgerBlue', 'Plum', 'LightSlateGray'];
+      let iconIndex = icons.indexOf(this.props.data.icon);
+      if(iconIndex >= 0) {
+        divStyle.borderLeftColor = iconColors[iconIndex];
+      } else {
+        divStyle.borderLeftColor = 'Beige';
+      }
+
       return (
-        <div className="hourly-weather">
+        <div className="hourly-weather" style={divStyle}>
           <div className="day-date">
             <div className="row">
-              <div className="col-6">
-                <h1>{day}, {dateOnly}</h1>
+              <div className="col-6 time-col">
+                <h1>{timeOnly}</h1>
               </div>
               <div className="col-6">
-                <h1>{timeOnly}</h1>
+                <h1>{day}, {dateOnly}</h1>
               </div>
             </div>
           </div>
           <div className="row">
             <div className="col-6">
+              <h2>{this.props.data.summary}</h2>
               <h2>Temp: {this.props.data.temperature}°F</h2>
               <h2>Feels like: {this.props.data.apparentTemperature}°F</h2>
             </div>

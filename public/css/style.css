@@ -29,12 +29,14 @@
 .hourly-weather {
   width: 100%;
   border: 1px solid gray;
-  margin-bottom: 3%;
 }
 
 .hourly-weather h1 {
   font-size: 1.6em;
-  text-align: center;
+}
+
+.hourly-weather .time-col h1 {
+  margin-left: 10%;
 }
 
 .hourly-weather h2 {
@@ -42,20 +44,12 @@
   margin-left: 10%;
 }
 
-.hourly-weather h2:first-child {
-  margin-bottom: 8%;
-}
-
 .hourly-weather h4 {
   font-size: 0.9em;
 }
 
-.hourly-weather .sub-details {
-
-}
-
 .hourly-weather .col-6 {
-  margin-top: 3%;
+  margin-top: 2%;
 }
 
 .hourly-weather .day-date {
