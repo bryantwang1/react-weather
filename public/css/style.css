@@ -11,7 +11,10 @@
 }
 
 .weather-card {
-
+  width: 45%;
+  margin: 2%;
+  border: 1px solid gray;
+  padding: 2%;
 }
 
 .detailed-weather-group {

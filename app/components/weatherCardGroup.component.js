@@ -19,6 +19,7 @@ class WeatherCardGroup extends React.Component {
             tempHigh={day.temperatureMax}
             tempLow={day.temperatureMin}
             timezone={this.props.timezone}
+            icon={day.icon}
             slideNumber={counter}
           />
         );
@@ -29,7 +30,6 @@ class WeatherCardGroup extends React.Component {
         <div className="row">
           <h2>7 Day summary: </h2>
           <h4>{this.props.daily.summary}</h4>
-          <hr />
           {weatherCards}
         </div>
       </div>
