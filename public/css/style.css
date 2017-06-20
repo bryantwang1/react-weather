@@ -26,6 +26,11 @@
 
 }
 
+.carousel {
+  height: 80vh;
+  overflow-y: scroll;
+}
+
 .hourly-weather {
   width: 100%;
   border: 1px solid gray;
