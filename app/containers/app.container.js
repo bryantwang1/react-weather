@@ -13,7 +13,8 @@ class AppContainer extends React.Component {
 
     this.state = {
       currently: {},
-      daily: []
+      daily: [],
+      hourly: []
     };
   }
 
@@ -26,7 +27,8 @@ class AppContainer extends React.Component {
         _this.setState({
           timezone: response.data.timezone,
           currently: response.data.currently,
-          daily: response.data.daily
+          daily: response.data.daily,
+          hourly: response.data.hourly
         });
       })
       .catch(error => {
@@ -44,6 +46,7 @@ class AppContainer extends React.Component {
         <DetailedWeatherGroup
           currently={this.state.currently}
           daily={this.state.daily}
+          hourly={this.state.hourly}
         />
         <WeatherCardGroup
           daily={this.state.daily}

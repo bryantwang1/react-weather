@@ -1,6 +1,7 @@
 import React from 'react';
 import CurrentWeather from './currentWeather.component';
 import DetailedWeather from './detailedWeather.component';
+import HourlyWeatherGroup from './hourlyWeatherGroup.component';
 
 class DetailedWeatherGroup extends React.Component {
 
@@ -22,6 +23,9 @@ class DetailedWeatherGroup extends React.Component {
     }
     return (
       <div className="detailed-weather-group">
+        <HourlyWeatherGroup
+          hourly={this.props.hourly}
+        />
         <CurrentWeather
           currently={this.props.currently}
           daily={todayDaily}
