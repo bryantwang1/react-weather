@@ -17,9 +17,11 @@ class HourlyWeatherGroup extends React.Component {
       });
     }
     return (
-      <div className="hourly-weather-group col-12">
-        <div className="row">
-          {hourlyWeathers}
+      <div className="carousel-item active">
+        <div className="hourly-weather-group col-12">
+          <div className="row">
+            {hourlyWeathers}
+          </div>
         </div>
       </div>
     );
