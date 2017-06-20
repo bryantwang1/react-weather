@@ -22,11 +22,13 @@ class WeatherCardGroup extends React.Component {
       });
     }
     return (
-      <div className="weather-card-group">
-        <h2>7 Day summary: </h2>
-        <h4>{this.props.daily.summary}</h4>
-        <hr />
-        {weatherCards}
+      <div className="weather-card-group col-12">
+        <div className="row">
+          <h2>7 Day summary: </h2>
+          <h4>{this.props.daily.summary}</h4>
+          <hr />
+          {weatherCards}
+        </div>
       </div>
     );
   }

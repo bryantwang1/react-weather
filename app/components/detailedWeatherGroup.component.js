@@ -32,7 +32,7 @@ class DetailedWeatherGroup extends React.Component {
       //detailedWeathers.splice(0, 1);
     }
     return (
-      <div className="detailed-weather-group">
+      <div className="detailed-weather-group col-12">
         <HourlyWeatherGroup
           hourly={this.props.hourly}
         />

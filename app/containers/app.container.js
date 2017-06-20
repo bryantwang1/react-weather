@@ -43,15 +43,19 @@ class AppContainer extends React.Component {
   render() {
     return (
       <div className="wang-weather">
-        <DetailedWeatherGroup
-          currently={this.state.currently}
-          daily={this.state.daily}
-          hourly={this.state.hourly}
-        />
-        <WeatherCardGroup
-          daily={this.state.daily}
-          timezone={this.state.timezone}
-        />
+        <div className="container">
+          <div className="row">
+            <DetailedWeatherGroup
+              currently={this.state.currently}
+              daily={this.state.daily}
+              hourly={this.state.hourly}
+            />
+            <WeatherCardGroup
+              daily={this.state.daily}
+              timezone={this.state.timezone}
+            />
+          </div>
+        </div>
       </div>
     );
   }

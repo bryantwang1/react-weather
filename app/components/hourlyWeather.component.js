@@ -9,7 +9,7 @@ class HourlyWeather extends React.Component {
     let timeOnly = dataTime.format('h:mm:ss a');
     if(typeof this.props.data != 'undefined') {
       let date = Moment(parseInt(this.props.data.time + '000')).day();
-      let days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+      let days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
       let day = days[date];
 
       let tempMaxTime = Moment(parseInt(this.props.data.temperatureMaxTime + '000')).format('h:mm:ss a');
@@ -17,15 +17,27 @@ class HourlyWeather extends React.Component {
       return (
         <div className="hourly-weather">
           <div className="day-date">
-            <h3>{day}, {dateOnly}</h3>
-            <h3>{timeOnly}</h3>
+            <div className="row">
+              <div className="col-6">
+                <h1>{day}, {dateOnly}</h1>
+              </div>
+              <div className="col-6">
+                <h1>{timeOnly}</h1>
+              </div>
+            </div>
           </div>
-          <h3>Temp: {this.props.data.temperature} degrees</h3>
-          <h4>Feels like: {this.props.data.apparentTemperature} degrees</h4>
-          <h3>{Math.floor(this.props.data.precipProbability * 100)}% chance of Precipation</h3>
-          <h4>Humidity: {Math.floor(this.props.data.humidity * 100)}%</h4>
-          <h4>Wind Speed: {this.props.data.windSpeed} mph</h4>
-          <h4>Wind Gust: {this.props.data.windGust} mph</h4>
+          <div className="row">
+            <div className="col-6">
+              <h2>Temp: {this.props.data.temperature}°F</h2>
+              <h2>Feels like: {this.props.data.apparentTemperature}°F</h2>
+            </div>
+            <div className="col-6 sub-details">
+              <h4>Precipation: {Math.floor(this.props.data.precipProbability * 100)}% chance</h4>
+              <h4>Humidity: {Math.floor(this.props.data.humidity * 100)}%</h4>
+              <h4>Wind Speed: {this.props.data.windSpeed} mph</h4>
+              <h4>Wind Gust: {this.props.data.windGust} mph</h4>
+            </div>
+          </div>
         </div>
       );
     } else {

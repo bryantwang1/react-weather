@@ -8,7 +8,7 @@ class WeatherCard extends React.Component {
     let days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
     let day = days[date];
     return (
-      <div className="weather-card">
+      <div className="weather-card col-6">
         <h3>Weather Card</h3>
         <h3>{day}</h3>
         <h4>{this.props.tempHigh}/{this.props.tempLow}</h4>

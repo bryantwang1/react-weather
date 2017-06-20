@@ -1,0 +1,63 @@
+.body {
+
+}
+
+.wang-weather {
+
+}
+
+.weather-card-group {
+
+}
+
+.weather-card {
+
+}
+
+.detailed-weather-group {
+
+}
+
+.detailed-weather {
+
+}
+
+.hourly-weather-group {
+
+}
+
+.hourly-weather {
+  width: 100%;
+  border: 1px solid gray;
+  margin-bottom: 3%;
+}
+
+.hourly-weather h1 {
+  font-size: 1.6em;
+  text-align: center;
+}
+
+.hourly-weather h2 {
+  font-size: 1.4em;
+  margin-left: 10%;
+}
+
+.hourly-weather h2:first-child {
+  margin-bottom: 8%;
+}
+
+.hourly-weather h4 {
+  font-size: 0.9em;
+}
+
+.hourly-weather .sub-details {
+
+}
+
+.hourly-weather .col-6 {
+  margin-top: 3%;
+}
+
+.hourly-weather .day-date {
+  border-bottom: 1px solid gray;
+}
