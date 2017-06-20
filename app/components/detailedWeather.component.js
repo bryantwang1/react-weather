@@ -16,7 +16,7 @@ class DetailedWeather extends React.Component {
         <h3>{this.props.data.summary}</h3>
         <h3>High: {this.props.data.temperatureMax} at {tempMaxTime}</h3>
         <h3>Low: {this.props.data.temperatureMin} at {tempMinTime}</h3>
-        <h3>{this.props.data.precipProbability * 100}% chance of Precipation</h3>
+        <h3>{Math.floor(this.props.data.precipProbability * 100)}% chance of Precipation</h3>
         <h4>UV Index: {this.props.data.uvIndex}</h4>
         <h4>Humidity: {Math.floor(this.props.data.humidity * 100)}%</h4>
         <h4>Wind Speed: {this.props.data.windSpeed} mph</h4>

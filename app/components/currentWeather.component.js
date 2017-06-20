@@ -23,7 +23,7 @@ class CurrentWeather extends React.Component {
           <h4>Feels like {this.props.currently.apparentTemperature} degrees</h4>
           <h3>High: {this.props.daily.temperatureMax} at {tempMaxTime}</h3>
           <h3>Low: {this.props.daily.temperatureMin} at {tempMinTime}</h3>
-          <h3>{this.props.daily.precipProbability * 100}% chance of Precipation</h3>
+          <h3>{Math.floor(this.props.daily.precipProbability * 100)}% chance of Precipation</h3>
           <h4>UV Index: {this.props.daily.uvIndex}</h4>
           <h4>Humidity: {Math.floor(this.props.currently.humidity * 100)}%</h4>
           <h4>Wind Speed: {this.props.daily.windSpeed} mph</h4>
