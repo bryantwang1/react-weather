@@ -8,7 +8,7 @@ class HourlyWeather extends React.Component {
     let dateOnly = dataTime.format('MMMM Do');
     let timeOnly = dataTime.format('h:mm:ss a');
     if(typeof this.props.data != 'undefined') {
-      let date = Moment.tz(parseInt(this.props.data.time + '000'), this.props.data.timezone).day();
+      let date = Moment(parseInt(this.props.data.time + '000')).day();
       let days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
       let day = days[date];
 
