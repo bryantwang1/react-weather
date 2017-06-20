@@ -41,12 +41,9 @@ class DetailedWeather extends React.Component {
         <h3>Precipation: {Math.floor(data.precipProbability * 100)}% chance</h3>
         <h4>Humidity: {Math.floor(data.humidity * 100)}%</h4>
         <h4>Cloud Cover: {Math.floor(data.cloudCover * 100)}%</h4>
-        <h3>{Math.floor(this.props.daily.precipProbability * 100)}% chance of Precipation</h3>
         <h4>UV Index: {this.props.daily.uvIndex}</h4>
-        <h4>Humidity: {Math.floor(this.props.daily.humidity * 100)}%</h4>
         <h4>Wind Speed: {this.props.daily.windSpeed} mph</h4>
         <h4>Wind Gust: {this.props.daily.windGust} mph</h4>
-        <h4>Cloud Cover: {Math.floor(this.props.daily.cloudCover * 100)}%</h4>
       </div>
     );
   }
