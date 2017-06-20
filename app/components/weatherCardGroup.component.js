@@ -8,7 +8,9 @@ class WeatherCardGroup extends React.Component {
     let weatherData = this.props.daily.data;
     let weatherCards = [];
     if (typeof weatherData != 'undefined') {
+      let counter = 0;
       weatherCards = weatherData.map(day => {
+        counter++;
         return (
           <WeatherCard
             key={day.time}
@@ -17,6 +19,7 @@ class WeatherCardGroup extends React.Component {
             tempHigh={day.temperatureMax}
             tempLow={day.temperatureMin}
             timezone={this.props.timezone}
+            slideNumber={counter}
           />
         );
       });

@@ -7,8 +7,10 @@ class WeatherCard extends React.Component {
     let date = Moment.tz(parseInt(this.props.time + '000'), this.props.timezone).day();
     let days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
     let day = days[date];
+
+    let slideNumber = this.props.slideNumber.toString();
     return (
-      <div className="weather-card col-6">
+      <div className="weather-card col-6" data-target="#weatherCarousel" data-slide-to={slideNumber}>
         <h3>Weather Card</h3>
         <h3>{day}</h3>
         <h4>{this.props.tempHigh}/{this.props.tempLow}</h4>

@@ -33,7 +33,7 @@ class DetailedWeatherGroup extends React.Component {
     }
     return (
       <div className="detailed-weather-group col-12">
-        <div id="weatherCarousel" className="carousel slide" data-ride="carousel">
+        <div id="weatherCarousel" className="carousel slide" data-ride="carousel" data-interval="false">
           <div className="carousel-inner" role="listbox">
             <HourlyWeatherGroup
               hourly={this.props.hourly}
