@@ -1,5 +1,6 @@
 import React from 'react';
 import HourlyWeather from './hourlyWeather.component';
+import HourlyAnimation from './hourlyAnimation.component';
 
 class HourlyWeatherGroup extends React.Component {
 
@@ -19,6 +20,7 @@ class HourlyWeatherGroup extends React.Component {
     return (
       <div className="carousel-item active">
         <div className="hourly-weather-group col-12">
+          <HourlyAnimation data={weatherData} />
           <div className="row">
             {hourlyWeathers}
           </div>
