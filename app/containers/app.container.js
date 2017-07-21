@@ -9,8 +9,6 @@ class AppContainer extends React.Component {
   constructor(props) {
     super(props);
 
-    this.client_id = apiKey;
-
     this.state = {
       currently: {},
       daily: [],
@@ -21,7 +19,7 @@ class AppContainer extends React.Component {
   getForecast(latitude, longitude) {
     let _this = this;
 
-    Axios.get(`https://api.darksky.net/forecast/${this.client_id}/${latitude},${longitude}`)
+    Axios.get(`https://f06yn0mele.execute-api.us-east-2.amazonaws.com/prod/GetWeather?longitude=${longitude}&latitude=${latitude}`)
       .then(response => {
         console.log(response);
         _this.setState({

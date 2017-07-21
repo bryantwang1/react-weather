@@ -2,21 +2,6 @@
 
 }
 
-.wang-weather {
-
-}
-
-.weather-card-group {
-
-}
-
-.weather-card {
-  width: 45%;
-  margin: 2%;
-  border: 1px solid gray;
-  padding: 2%;
-}
-
 .detailed-weather-group {
 
 }
@@ -25,18 +10,23 @@
 
 }
 
-.hourly-weather-group {
-
-}
-
 .carousel {
   height: 80vh;
+  min-height: 400px;
   overflow-y: scroll;
 }
 
 .hourly-weather {
   width: 100%;
   border: 1px solid gray;
+}
+
+.hourly-weather .col-6 {
+  margin-top: 2%;
+}
+
+.hourly-weather .day-date {
+  border-bottom: 1px solid gray;
 }
 
 .hourly-weather h1 {
@@ -56,10 +46,21 @@
   font-size: 0.9em;
 }
 
-.hourly-weather .col-6 {
-  margin-top: 2%;
+.hourly-weather-group {
+  min-height: 300px;
 }
 
-.hourly-weather .day-date {
-  border-bottom: 1px solid gray;
+.wang-weather {
+
+}
+
+.weather-card {
+  width: 28%;
+  margin: 2%;
+  border: 1px solid gray;
+  padding: 2%;
+}
+
+.weather-card-group {
+
 }

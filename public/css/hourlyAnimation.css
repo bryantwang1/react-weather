@@ -1,15 +1,28 @@
 .hourly-animation {
   width: 100%;
   min-height: 300px;
+  max-height: 400px;
   height: 50vh;
 }
 
 #animation-background {
   position: absolute;
   background-color: lightblue;
+  background-attachment: fixed;
   width: inherit;
   height: inherit;
+  min-height: 300px;
   z-index: -110;
+}
+
+#animation-info {
+  font-size: 2em;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #animation-sun {
@@ -82,9 +95,10 @@
 
 #animation-precip {
   position: absolute;
-  /*overflow: hidden;*/
+  overflow: hidden;
   height: inherit;
   width: inherit;
+  min-height: 300px;
   z-index: -100;
 }
 

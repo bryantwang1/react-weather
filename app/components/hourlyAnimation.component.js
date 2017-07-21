@@ -19,6 +19,17 @@ class HourlyAnimation extends React.Component {
     }
   }
 
+  cycleInfo(temps) {
+    let i = 0;
+    function rotate() {
+      $('#animation-info').text(temps[i])
+      i++;
+    }
+
+    rotate();
+    setInterval(rotate, 1000);
+  }
+
   componentDidMount() {
     this.makeItRain(800);
   }
@@ -51,9 +62,14 @@ class HourlyAnimation extends React.Component {
       }
     }
 
+    if(temps.length > 0) {
+      this.cycleInfo(temps);
+    }
+
     return(
       <div className="hourly-animation">
         <div id="animation-background">
+          <div id="animation-info"></div>
           <div id="animation-sun"></div>
           <div id="cloud-container">
             <div className="animation-cloud" id="cloud-one">
