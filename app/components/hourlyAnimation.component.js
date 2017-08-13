@@ -30,9 +30,9 @@ class HourlyAnimation extends React.Component {
     setInterval(rotate, 1000);
   }
 
-  componentDidMount() {
-    this.makeItRain(800);
-  }
+  // componentDidMount() {
+    // this.makeItRain(800);
+  // }
 
   render() {
     let icons = [];
