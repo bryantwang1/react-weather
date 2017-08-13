@@ -1,7 +1,8 @@
 import React from 'react';
+import Moment from 'moment-timezone';
 import HourlyWeather from './hourlyWeather.component';
 import HourlyAnimation from './hourlyAnimation.component';
-import Moment from 'moment-timezone';
+import HourlyPieCharts from './hourlyPieCharts.component';
 
 class HourlyWeatherGroup extends React.Component {
 
@@ -45,6 +46,7 @@ class HourlyWeatherGroup extends React.Component {
       <div className="carousel-item active">
         <div className="hourly-weather-group col-12">
           <HourlyAnimation data={weatherData} />
+          <HourlyPieCharts data={dataByDay} />
           <div className="row">
             {hourlyWeathers}
           </div>
