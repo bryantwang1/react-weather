@@ -20,31 +20,29 @@
   position: absolute;
   z-index: 100;
   font-size: 1.3rem;
+  font-weight: bold;
+  color: orange;
 }
 
-.pie-time:nth-of-type(1) {
-  top: 0%;
-}
-
-.pie-time:nth-of-type(2) {
-  top: -10%;
+.pie-time:nth-child(3) {
+  top: 10%;
   left: 50%;
   transform: translate(-50%, 0);
 }
 
-.pie-time:nth-of-type(3) {
+.pie-time:nth-child(4) {
   right: 10%;
   top: 50%;
   transform: translate(0%,-50%);
 }
 
-.pie-time:nth-of-type(4) {
-  top: 100%;
+.pie-time:nth-child(5) {
+  top: 80%;
   left: 50%;
   transform: translate(-50%, 0);
 }
 
-.pie-time:nth-of-type(5) {
+.pie-time:nth-child(6) {
   left: 10%;
   top: 50%;
   transform: translate(0%,-50%);
@@ -57,6 +55,16 @@
   background-color: lightgreen;
   border-radius: 50%;
   overflow: hidden;
+  transform: rotate(180deg);
+}
+
+.pie-chart:nth-of-type(1) {
+  height: 90%;
+  width: 90%;
+  top: 5%;
+  left: 5%;
+  z-index: 50;
+  border: 2px solid gray;
 }
 
 .pie-half {
